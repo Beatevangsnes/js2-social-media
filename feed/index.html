@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/index.js" defer type="module"></script>
+    <script src="../src/js/api/auth/nav.js" defer type="module"></script>
+    <script
+      src="/src/js/templates/displayPosts.js"
+      defer
+      type="module"
+    ></script>
+    <link href="/src/styles/output.css" rel="stylesheet" />
+    <title>Posts</title>
+  </head>
+  <body>
+    <header class="nav-menu"></header>
+    <main>
+      <div class="bg-gray-900 py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 text-center lg:px-8">
+          <div class="mx-auto max-w-2xl">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Feed
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-gray-400">
+              Explore the latest posts from our community.
+            </p>
+          </div>
+          <div
+            id="postsContainer"
+            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
+          >
+            <!-- Posts will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

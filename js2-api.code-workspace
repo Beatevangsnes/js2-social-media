@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "js2-api",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

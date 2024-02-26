@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/index.js" defer type="module"></script>
+    <link href="/src/styles/output.css" rel="stylesheet" />
+    <script src="/src/js/api/auth/nav.js" defer type="module"></script>
+    <title>Login</title>
+  </head>
+  <body class="bg-gray-900">
+    <header class="nav-menu"></header>
+    <main>
+      <div
+        class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8"
+      >
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+          <img
+            class="mx-auto h-10 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+            alt="Your Company"
+          />
+          <h2
+            class="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-white"
+          >
+            Sign in to your account
+          </h2>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
+          <div
+            class="px-6 py-12 shadow sm:rounded-lg sm:px-12 backdrop-blur-md bg-gray/30 shadow-2xl ring-1 ring-white/10"
+          >
+            <form class="space-y-6" id="loginForm" name="loginForm">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium leading-6 text-white"
+                  >Email address</label
+                >
+                <div class="mt-2">
+                  <input
+                    required
+                    id="loginEmail"
+                    name="email"
+                    type="email"
+                    placeholder="Email@stud.noroff.no"
+                    pattern="[\w\-.]+@(stud.)?noroff.no$"
+                    title="Only Noroff student or staff emails are valid."
+                    class="form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="password"
+                  class="block text-sm font-medium leading-6 text-white"
+                  >Password</label
+                >
+                <div class="mt-2">
+                  <input
+                    name="password"
+                    required
+                    id="loginPassword"
+                    type="password"
+                    minlength="8"
+                    placeholder="************"
+                    class="form-control block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  data-auth="login"
+                  class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Sign in
+                </button>
+              </div>
+            </form>
+            <!-- Login Error Message -->
+            <div id="loginError" style="color: red; display: none"></div>
+
+            <div>
+              <div class="relative mt-10">
+                <div
+                  class="absolute inset-0 flex items-center"
+                  aria-hidden="true"
+                >
+                  <div class="w-full border-t border-gray-200"></div>
+                </div>
+                <div
+                  class="relative flex justify-center text-sm font-medium leading-6"
+                >
+                  <span class="px-6 text-white bg-gray-900"
+                    >Don't have an account?</span
+                  >
+                </div>
+              </div>
+
+              <div class="mt-6 gap-4">
+                <a
+                  href="/js2-social-media/profile/register/index.html"
+                  class="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:ring-transparent"
+                >
+                  <span class="text-sm font-semibold leading-6">Register</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
